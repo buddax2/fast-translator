@@ -8,6 +8,8 @@
 
 #import <Cocoa/Cocoa.h>
 
+@class YAAppDelegate;
+
 @interface YATranslatorViewController : NSViewController <NSURLConnectionDataDelegate, NSTextDelegate, NSTextViewDelegate>
 {
     NSURLConnection *_connection;
@@ -15,5 +17,8 @@
 
 @property (unsafe_unretained) IBOutlet NSTextView *sourceTextView;
 @property (unsafe_unretained) IBOutlet NSTextView *translateTextView;
+@property (assign) YAAppDelegate *delegate;
+@property (weak) IBOutlet NSTextField *leftLanguageLabel;
+@property (weak) IBOutlet NSTextField *rightLanguageLabel;
 
 @end

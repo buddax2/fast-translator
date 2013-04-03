@@ -8,11 +8,20 @@
 
 #import "YATranslatorViewController.h"
 #import "SBJsonParser.h"
+#import "YAAppDelegate.h"
+
+typedef enum {
+    FromEnglishToRussion = 0,
+    FromRussionToEnglish = 1,
+} TranslateDirection;
 
 static NSString * const translatorURL = @"http://translate.yandex.net/api/v1/tr.json/translate";
 
 @interface YATranslatorViewController ()
-
+{
+    NSDictionary    *_languages;
+    NSUInteger       _translateDirectionInteger;
+}
 @end
 
 @implementation YATranslatorViewController
@@ -23,10 +32,18 @@ static NSString * const translatorURL = @"http://translate.yandex.net/api/v1/tr.
     if (self) {
         // Initialization code here.
         
+        _languages = @{@"en-ru":@"English", @"ru-en":@"Русский"};
+        _translateDirectionInteger = FromEnglishToRussion;
+        
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(translateTextFromAppleScript:) name:@"AppShouldTranslateStringNotification" object:nil];
     }
     
     return self;
+}
+
+- (NSString*)translateDirectionString
+{
+    return _languages.allKeys[_translateDirectionInteger];
 }
 
 // TODO: API has limit to 10 000 requests.
@@ -44,8 +61,27 @@ static NSString * const translatorURL = @"http://translate.yandex.net/api/v1/tr.
     }
 }
 
+- (IBAction)changeTranslateDirection:(id)sender {
+    _rightLanguageLabel.stringValue = _languages.allValues[_translateDirectionInteger];
+
+    _translateDirectionInteger = (_translateDirectionInteger == FromRussionToEnglish) ? FromEnglishToRussion : FromRussionToEnglish;
+    
+    _leftLanguageLabel.stringValue = _languages.allValues[_translateDirectionInteger];
+    
+    if (self.translateTextView.string.length > 0)
+    {
+        self.sourceTextView.string = self.translateTextView.string;
+        [self translateText:nil];
+    }
+}
+
 - (void)translateTextFromAppleScript:(NSNotification*)notification
 {
+    if (!self.delegate.window.isVisible)
+    {
+        [self.delegate.window makeKeyAndOrderFront:nil];
+    }
+        
     NSString *stringToTranslate = notification.object;
     self.sourceTextView.string = stringToTranslate;
     
@@ -62,7 +98,7 @@ static NSString * const translatorURL = @"http://translate.yandex.net/api/v1/tr.
     NSURL *URL = [NSURL URLWithString:translatorURL];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:URL];
     request.HTTPMethod = @"POST";
-    NSString *params = [NSString stringWithFormat:@"lang=ru&text=%@", string];
+    NSString *params = [NSString stringWithFormat:@"lang=%@&text=%@", [self translateDirectionString], string];
     NSData *data = [params dataUsingEncoding:NSUTF8StringEncoding];
     
     [request addValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
