@@ -20,7 +20,7 @@
     } else {
         // raise error
         [self setScriptErrorNumber:-50];
-        [self setScriptErrorString:@"Parameter Error: A Parameter is expected for the verb 'translate' (You have to specify _what_ you want to translate!)."];
+        [self setScriptErrorString:@"No arguments were found"];
     }
     // Implement your code logic (in this example, I'm just posting an internal notification)
     [[NSNotificationCenter defaultCenter] postNotificationName:@"AppShouldTranslateStringNotification" object:stringToTranslate];

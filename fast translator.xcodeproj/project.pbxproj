@@ -23,6 +23,7 @@
 		4BCE35DC170C0CE80015FF3A /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BCE35D0170C0CE80015FF3A /* SBJsonWriter.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		4BCE35E3170C3F570015FF3A /* translator.sdef in Resources */ = {isa = PBXBuildFile; fileRef = 4BCE35E2170C3F570015FF3A /* translator.sdef */; };
 		4BCE35E6170C40550015FF3A /* YATranslateTextFromAppleScript.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BCE35E5170C40550015FF3A /* YATranslateTextFromAppleScript.m */; };
+		4BCF185E170C6996005BB1FB /* readme.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4BCF185D170C6996005BB1FB /* readme.txt */; };
 		4BD8B00C170BF22F00610B01 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BD8B00B170BF22F00610B01 /* Cocoa.framework */; };
 		4BD8B016170BF23000610B01 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4BD8B014170BF23000610B01 /* InfoPlist.strings */; };
 		4BD8B018170BF23000610B01 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BD8B017170BF23000610B01 /* main.m */; };
@@ -64,6 +65,7 @@
 		4BCE35E2170C3F570015FF3A /* translator.sdef */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = translator.sdef; sourceTree = "<group>"; };
 		4BCE35E4170C40550015FF3A /* YATranslateTextFromAppleScript.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YATranslateTextFromAppleScript.h; sourceTree = "<group>"; };
 		4BCE35E5170C40550015FF3A /* YATranslateTextFromAppleScript.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YATranslateTextFromAppleScript.m; sourceTree = "<group>"; };
+		4BCF185D170C6996005BB1FB /* readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = readme.txt; sourceTree = "<group>"; };
 		4BD8B008170BF22F00610B01 /* fast translator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "fast translator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BD8B00B170BF22F00610B01 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		4BD8B00E170BF23000610B01 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -195,6 +197,7 @@
 				4BD8B019170BF23000610B01 /* fast translator-Prefix.pch */,
 				4BD8B01A170BF23000610B01 /* Credits.rtf */,
 				4BCE35E2170C3F570015FF3A /* translator.sdef */,
+				4BCF185D170C6996005BB1FB /* readme.txt */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -256,6 +259,7 @@
 				4BD8B022170BF23100610B01 /* MainMenu.xib in Resources */,
 				4BCE35B4170BFCB90015FF3A /* YATranslatorViewController.xib in Resources */,
 				4BCE35E3170C3F570015FF3A /* translator.sdef in Resources */,
+				4BCF185E170C6996005BB1FB /* readme.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
