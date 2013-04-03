@@ -7,9 +7,11 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "YATranslatorViewController.h"
 
 @interface YAAppDelegate : NSObject <NSApplicationDelegate>
 
 @property (assign) IBOutlet NSWindow *window;
+@property (nonatomic, strong) IBOutlet YATranslatorViewController *translatorViewController;
 
 @end

@@ -7,12 +7,16 @@
 //
 
 #import "YAAppDelegate.h"
+#import "YATranslatorViewController.h"
 
 @implementation YAAppDelegate
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
     // Insert code here to initialize your application
+    self.translatorViewController = [[YATranslatorViewController alloc] initWithNibName:@"YATranslatorViewController" bundle:nil];
+    
+    [self.window.contentView addSubview:self.translatorViewController.view];
 }
 
 @end
