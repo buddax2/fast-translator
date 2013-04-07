@@ -2,12 +2,6 @@
 <!DOCTYPE dictionary SYSTEM "file://localhost/System/Library/DTDs/sdef.dtd">
 
 <dictionary xmlns:xi="http://www.w3.org/2003/XInclude">
-    
-    
-    <!-- use XInclude to include the standard suite -->
-	<xi:include href="file:///System/Library/ScriptingDefinitions/CocoaStandard.sdef" xpointer="xpointer(/dictionary/suite)"/>
-    
-    
     <!-- specific suite(s) for the application follow... -->
 	<suite name="Fast Translator" code="TRnl" description="Terminology for the SimpleScriptingVerbs Sample.">
 		<command name="translate" code="TRnlDpCm" description="run a simple command with a direct parameter">

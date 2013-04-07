@@ -30,6 +30,8 @@
 		4BD8B01C170BF23000610B01 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 4BD8B01A170BF23000610B01 /* Credits.rtf */; };
 		4BD8B01F170BF23000610B01 /* YAAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BD8B01E170BF23000610B01 /* YAAppDelegate.m */; };
 		4BD8B022170BF23100610B01 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BD8B020170BF23100610B01 /* MainMenu.xib */; };
+		682770B76350335942A75972 /* NSString+StringParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 6827797928B39F69C3D56B9D /* NSString+StringParser.m */; };
+		990094B317105ED6008497AC /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 990094B217105ED6008497AC /* WebKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -79,6 +81,9 @@
 		4BD8B01D170BF23000610B01 /* YAAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YAAppDelegate.h; sourceTree = "<group>"; };
 		4BD8B01E170BF23000610B01 /* YAAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YAAppDelegate.m; sourceTree = "<group>"; };
 		4BD8B021170BF23100610B01 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		6827797928B39F69C3D56B9D /* NSString+StringParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+StringParser.m"; sourceTree = "<group>"; };
+		68277ED43DFD1C6C76922056 /* NSString+StringParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+StringParser.h"; sourceTree = "<group>"; };
+		990094B217105ED6008497AC /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				990094B317105ED6008497AC /* WebKit.framework in Frameworks */,
 				4BD8B00C170BF22F00610B01 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -97,6 +103,8 @@
 			isa = PBXGroup;
 			children = (
 				4BCE35B6170C0CE80015FF3A /* SBJson */,
+				6827797928B39F69C3D56B9D /* NSString+StringParser.m */,
+				68277ED43DFD1C6C76922056 /* NSString+StringParser.h */,
 			);
 			name = Libraries;
 			path = "fast translator/Libraries";
@@ -156,6 +164,7 @@
 		4BD8B00A170BF22F00610B01 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				990094B217105ED6008497AC /* WebKit.framework */,
 				4BD8B00B170BF22F00610B01 /* Cocoa.framework */,
 				4BD8B00D170BF22F00610B01 /* Other Frameworks */,
 			);
@@ -286,6 +295,7 @@
 				4BCE35DB170C0CE80015FF3A /* SBJsonUTF8Stream.m in Sources */,
 				4BCE35DC170C0CE80015FF3A /* SBJsonWriter.m in Sources */,
 				4BCE35E6170C40550015FF3A /* YATranslateTextFromAppleScript.m in Sources */,
+				682770B76350335942A75972 /* NSString+StringParser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
