@@ -189,4 +189,8 @@ static NSString * const translatedTextHTMLTemplate = @"<html><body><div>%@</div>
     [[_webView mainFrame] loadHTMLString:htmlOutput baseURL:nil];
 }
 
+- (IBAction)toggleDrawerVisability:(id)sender {
+    [_delegate toggleHistoryPanelState];
+}
+
 @end

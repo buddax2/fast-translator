@@ -31,4 +31,14 @@
     }	
 }
 
+- (void)toggleHistoryPanelState
+{
+    NSDrawerState state = [self.historyPanel state];
+    if (NSDrawerOpeningState == state || NSDrawerOpenState == state) {
+        [self.historyPanel close];
+    } else {
+        [self.historyPanel openOnEdge:NSMaxXEdge];
+    }
+}
+
 @end

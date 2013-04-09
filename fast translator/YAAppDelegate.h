@@ -13,5 +13,8 @@
 
 @property (assign) IBOutlet NSWindow *window;
 @property (nonatomic, strong) IBOutlet YATranslatorViewController *translatorViewController;
+@property (weak) IBOutlet NSDrawer *historyPanel;
+
+- (void)toggleHistoryPanelState;
 
 @end
