@@ -1,6 +1,8 @@
 fast-translator
 ===============
 
+fast translator is licensed under [the MIT License (MIT)](http://opensource.org/licenses/MIT).
+
 fast translator will work with Yandex.Translator API
 ![Fast translator](https://github.com/buddax2/fast-translator/blob/master/screenshots/appScreen.png?raw=true)
 
